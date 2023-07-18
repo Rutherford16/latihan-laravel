@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('login', ['title' => 'Login']);
 });
 
 Route::post('/dashboard', function () {
-    return view('beranda', ['username' => 'ronny']);
+    return view('beranda', ['title' => 'Beranda']);
 });

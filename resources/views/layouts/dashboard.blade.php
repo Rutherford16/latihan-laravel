@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Sedayu Dharma Group - Dashboard</title>
-
-    @vite('resources/css/app.css')
-</head>
-
+@extends('layouts.head')
+@section('body')
 <body class="bg-stone-800 font-mono">
     <div class="w-3/12 h-screen bg-stone-300 inline-block absolute">
         <div class="bg-stone-600 rounded-full w-20 h-20 mt-2 ms-2 inline-block"></div>
@@ -31,5 +21,4 @@
         @yield('content')
     </div>
 </body>
-
-</html>
+@endsection

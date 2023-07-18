@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Sedayu Dharma Group - Login</title>
-
-    @vite('resources/css/app.css')
-</head>
-
+@extends('layouts.head')
+@section('body')
 <body class="bg-stone-800 font-mono">
     <div class="w-screen h-screen flex items-center">
         <div class="border-stone-500 border w-fit h-fit p-8 m-auto rounded">
@@ -22,5 +12,4 @@
         </div>
     </div>
 </body>
-
-</html>
+@endsection
