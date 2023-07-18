@@ -18,9 +18,5 @@ Route::get('/', function () {
 });
 
 Route::post('/dashboard', function () {
-    return view('layouts/dashboard', ['username' => 'ronny']);
-});
-
-Route::get('/beranda', function () {
-    return view('beranda');
+    return view('beranda', ['username' => 'ronny']);
 });
