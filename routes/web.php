@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Models\Employees;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +16,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login', ['title' => 'Login']);
+    return view('login', [
+        'title' => 'Login'
+    ]);
 });
 
-Route::post('/dashboard', function () {
-    return view('beranda', ['title' => 'Beranda']);
+
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('/dashboard', function () {
+    return view('beranda', [
+        'title' => 'Beranda',
+        'name' => 'Ronny Hidayat',
+        'employees' => Employees::all()
+    ]);
 });

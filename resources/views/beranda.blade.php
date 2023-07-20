@@ -1,11 +1,22 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, vero quisquam inventore nostrum hic, id sunt reprehenderit
-    ea labore harum impedit ab itaque enim ipsam asperiores voluptatem facilis et deleniti?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laborum amet dolor expedita repellat eaque provident
-    accusantium, assumenda voluptate possimus architecto repellendus nulla suscipit minus. Quae voluptatum omnis aperiam
-    perspiciatis.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus delectus obcaecati distinctio nostrum fugit sequi,
-    quod deserunt nisi ipsum soluta enim, maiores officia dolorem laudantium! Ad fugit vel doloremque expedita.
+    <table class="table-fixed">
+        <thead class="bg-slate-500">
+            <th class="px-2">Name</th>
+            <th class="px-2">Email</th>
+            <th class="px-2">Title</th>
+            <th class="px-2">Extension</th>
+        </thead>
+        <tbody class="bg-slate-500">
+            @foreach ($employees as $employee)
+                <tr class="odd:bg-white even:bg-slate-300 hover:bg-slate-400">
+                    <td class="px-2">{{ $employee['firstName'] }} {{ $employee['lastName'] }}</td>
+                    <td class="px-2">{{ $employee['email'] }}</td>
+                    <td class="px-2">{{ $employee['jobTitle'] }}</td>
+                    <td class="px-2">{{ $employee['extension'] }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection
